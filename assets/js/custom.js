@@ -1,18 +1,30 @@
+
 (function ($) {
 	
 	"use strict";
-
 	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
-	  var header = $('header').height();
+		var scroll = $(window).scrollTop();
+		var box = $('.header-text').height();
+		var header = $('header').height();
+  
+		if (scroll >= 1) {
+		  $("header").addClass("background-header");
+		} else {
+		  $("header").removeClass("background-header");
+		}
+	  });
+	// Previously menu worked on scrol past header text height
+	// $(window).scroll(function() {
+	//   var scroll = $(window).scrollTop();
+	//   var box = $('.header-text').height();
+	//   var header = $('header').height();
 
-	  if (scroll >= box - header) {
-	    $("header").addClass("background-header");
-	  } else {
-	    $("header").removeClass("background-header");
-	  }
-	});
+	//   if (scroll >= box - header) {
+	//     $("header").addClass("background-header");
+	//   } else {
+	//     $("header").removeClass("background-header");
+	//   }
+	// });
 	
 	$('.filters ul li').click(function(){
         $('.filters ul li').removeClass('active');

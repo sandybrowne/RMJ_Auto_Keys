@@ -696,14 +696,139 @@ header
   }
 }
 
-
 /* 
 ---------------------------------------------
 banner
 --------------------------------------------- 
 */
-
 .swiper-container {
+  height: calc(100vh - 0px);
+  margin: 0px;
+  background-color: #212741;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.slide-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Adding a pseudo-element for darkening */
+.slide-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay, adjust the opacity for darkness */
+  z-index: 1; /* Under the text but above the image */
+}
+
+
+.swiper-slide-active h2 {
+  animation: fadeInLeft .8s;
+  -webkit-animation-delay: 1s;
+  animation-delay: .3s;
+  opacity: 1;
+}
+
+.swiper-slide-active p {
+  animation: fadeInRight .8s;
+  -webkit-animation-delay: 1s;
+  animation-delay: .3s;
+  opacity: 1;
+}
+
+.swiper-slide-active .div-dec {
+  animation: fadeIn .8s;
+  -webkit-animation-delay: 1s;
+  animation-delay: .3s;
+  opacity: 1;
+}
+
+.swiper-slide-active .buttons .green-button,
+.swiper-slide-active .buttons .orange-button {
+  animation: fadeInUp .8s;
+  -webkit-animation-delay: 1s;
+  animation-delay: .3s;
+  opacity: 1;
+}
+
+.slide-inner .header-text {
+  position: absolute;
+  z-index: 2; /* Ensure the text is on top of the pseudo-element */
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slide-inner .header-text h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 1;
+  visibility: visible;
+  line-height: 70px;
+  margin-bottom: 40px;
+}
+
+.slide-inner .header-text .div-dec {
+  width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-inner .header-text p {
+  color: #fff;
+  margin-right: 60px;
+  margin-bottom: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-inner .header-text h2 em {
+  font-style: normal;
+  color: #ff511a;
+}
+
+.slide-inner .header-text .buttons {
+  display: inline;
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-inner .header-text .buttons .green-button {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #fff !important;
+} */
+
+
+/* 
+---------------------------------------------
+banner Old
+--------------------------------------------- 
+*/
+/* .swiper-container {
   height: calc(100vh - 0px);
   margin: 0px;
   background-color: #212741;
@@ -762,7 +887,7 @@ banner
 .slide-inner .header-text h2 {
   position: relative;
   z-index: 2;
-  font-size: 56px;
+  font-size: 36px;
   color: #fff;
   font-weight: 700;
   opacity: 1;
@@ -808,11 +933,13 @@ banner
 
 .swiper-button-next, .swiper-button-prev {
   color: #fff !important;
-}
+} */ */
+
+
 
 /*
 ---------------------------------------------
-services
+Services
 ---------------------------------------------
 */ 
 
@@ -913,7 +1040,7 @@ about us
 */
 
 section.about-us {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 section.about-us .section-heading {
