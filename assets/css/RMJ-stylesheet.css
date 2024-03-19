@@ -30,6 +30,7 @@ font & reset css
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
 /* 
+
 ---------------------------------------------
 reset
 --------------------------------------------- 
@@ -287,7 +288,7 @@ header
 
 .background-header .main-nav .logo {
   line-height: 80px;
-  width: 160px;
+  width: 300px;
 }
 
 .background-header .nav {
